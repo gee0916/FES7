@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        p {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            /* font-weight: bold; */
+            text-align: justify;
+            line-height: 1.6;
+            /* letter-spacing: 10px; */
+            /* word-spacing: 40px; */
+            text-indent: 10px;
+
+            background-color: aquamarine;
+            /* 말줄임 처리 */
+            /* white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; */
+
+            /* 여러줄 밑줄임 */
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            font-weight: initial;
+        }
+
+        p::first-letter {
+            text-transform: uppercase;
+            font-size: 32px;
+        }
+
+        .fes7 {
+            text-transform: capitalize;
+            text-decoration: orange underline line-through overline wavy 2px;
+            /* text-decoration-color: orange;
+            text-decoration-line: underline line-through overline;
+            text-decoration-style: wavy;
+            text-decoration-thickness: 2px; */
+        }
+
+        .tx-shadow {
+            text-shadow: 1px 0px 0px rgb(255, 0, 0),
+                -1px -0px 1px rgb(255, 0, 0);
+            box-shadow: 4px 4px 0px rgb(255, 0, 0);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magnam, quia cum eveniet fuga earum
+        temporibus labore explicabo pariatur quo soluta dolor magni, facilis nesciunt? Incidunt exercitationem nesciunt
+        quaerat officia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magnam, quia cum eveniet fuga earum
+        temporibus labore explicabo pariatur quo soluta dolor magni, facilis nesciunt? Incidunt exercitationem nesciunt
+        quaerat officia.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magnam, quia cum eveniet fuga earum
+        temporibus labore explicabo pariatur quo soluta dolor magni, facilis nesciunt? Incidunt exercitationem nesciunt
+        quaerat officia.</p>
+
+    <p class="fes7">Frontend School7 ddd aaa ggg</p>
+    <P CLASS="tx-shadow">Text Shadow</P>
+
+</body>
+
+</html>

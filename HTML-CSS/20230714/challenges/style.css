@@ -18,7 +18,8 @@ h1 {
 }
 
 body {
-  background: url(images/bg.png);
+  background: url(images/bg.png) no-repeat;
+  background-size: cover;
 }
 
 .wrapper {

@@ -1,0 +1,57 @@
+h1 {
+  font-size: inherit;
+  margin: 0;
+}
+
+body {
+  background-color: #d9d9d9;
+}
+
+:root {
+  /* point */
+  --point-main-color: #ff007a;
+  --point-check-color: #759cff;
+
+  /* background */
+  --background-color: #eeeeee;
+  --background-border-color: #d9d9d9;
+
+  /* size */
+  --size: 16px;
+}
+
+html {
+  font-size: var(--size);
+}
+
+.wrapper {
+  width: 28em;
+  height: 30.875em;
+  background-color: var(--background-color);
+  border-radius: 1.25em;
+  box-shadow: 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: var(--point-main-color);
+  background-color: white;
+  height: 5em;
+  border-radius: 1.25rem 1.25rem 0rem 0rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.2em solid var(--background-border-color);
+}
+
+h1::before {
+  content: "";
+  width: calc(1em / 3);
+  height: 1.3333333em;
+  background-color: var(--point-main-color);
+  margin-right: 2rem;
+  border-radius: 0rem 0.625rem 0.625rem 0rem;
+}

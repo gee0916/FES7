@@ -1,6 +1,25 @@
-h1 {
+h1,
+span {
   font-size: inherit;
   margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+}
+
+ul,
+label {
+  font-family: "Arial", sans-serif;
 }
 
 body {
@@ -9,8 +28,9 @@ body {
 
 :root {
   /* point */
-  --point-main-color: #ff007a;
+  --point-color: #ff007a;
   --point-check-color: #759cff;
+  --point-font-color: #888888;
 
   /* background */
   --background-color: #eeeeee;
@@ -25,6 +45,8 @@ html {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   width: 28em;
   height: 30.875em;
   background-color: var(--background-color);
@@ -38,7 +60,7 @@ html {
 
 h1 {
   font-size: 1.5rem;
-  color: var(--point-main-color);
+  color: var(--point-color);
   background-color: white;
   height: 5em;
   border-radius: 1.25rem 1.25rem 0rem 0rem;
@@ -51,7 +73,65 @@ h1::before {
   content: "";
   width: calc(1em / 3);
   height: 1.3333333em;
-  background-color: var(--point-main-color);
+  background-color: var(--point-color);
   margin-right: 2rem;
   border-radius: 0rem 0.625rem 0.625rem 0rem;
+}
+
+.check-list-wrap {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.88rem;
+}
+
+li {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  font-size: 1rem;
+  color: var(--point-font-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  border-radius: 0.625em;
+  border: 0.3em solid var(--background-border-color);
+  background-color: white;
+  width: 23.25em;
+  height: 2.5em;
+  cursor: pointer;
+}
+
+span {
+  margin-left: 0.94em;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ label {
+  border: 0.3em solid var(--point-check-color);
+  color: var(--point-check-color);
+  font-weight: 700;
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: url(images/check.svg);
+  position: absolute;
+  right: 12%;
+  width: 1.25rem;
+  height: 1.25rem;
+  transform: translateY(-20%);
 }

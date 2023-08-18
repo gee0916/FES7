@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box"></div>
+    <ul>
+        <li><button id="red" class="btn_change">빨강</button></li>
+        <li><button id="yellow" class="btn_change">노랑</button></li>
+        <li><button id="green" class="btn_change">초록</button></li>
+    </ul>
+    <script>
+        let btn = document.getElementsByClassName('btn_change');
+        let bg = document.getElementById('box');
+
+        for (let i = 0; i < 3; i++) {
+            btn[i].addEventListener('click', function () {
+                //클릭된 버튼 아이디 불러오기
+                let colorName = this.id;
+                bg.style.backgroundColor = colorName;
+            });
+        }
+    </script>
+</body>
+
+</html>

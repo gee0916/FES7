@@ -1,8 +1,7 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, Timestamp } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
@@ -12,12 +11,13 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID,
 };
 
-// firebase 초기화
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // firestore 초기화
 const appFireStore = getFirestore(app);
 // 인증 초기화
 const appAuth = getAuth();
 
-// 밖에서 사용할 수 있도록 준비합니다.
-export { appFireStore, appAuth };
+const timestamp = Timestamp;
+
+export { appFireStore, appAuth, timestamp };
